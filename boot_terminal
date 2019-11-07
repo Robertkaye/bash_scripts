@@ -1,0 +1,3 @@
+#!/bin/bash
+#set to boot into terminal by default
+sudo systemctl set-default multi-user.target

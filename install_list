@@ -1,0 +1,93 @@
+#!/bin/bash
+#clean install everything
+
+#cleanup
+sudo apt-get autoremove
+#brave browser (mint18+)
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo
+apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+source /etc/os-release
+
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/
+$UBUNTU_CODENAME main" | sudo tee
+/etc/apt/sources.list.d/brave-browser-release-${UBUNTU_CODENAME}.list
+
+#update & dist-upgrade
+sudo apt-get update
+sudo apt-get dist-upgrade
+#brave browser (mint18+)
+sudo apt install brave-keyring brave-browser
+
+#prevent sleep
+sudo apt-get install -y caffeine
+
+#clipboard manager
+sudo apt-get install -y clipit
+
+#fun
+sudo apt-get install -y cmatrix
+sudo apt-get install -y cowsay
+sudo apt-get install -y fortune-mod
+
+#torrenting client
+sudo apt-get install -y deluge-common
+#torrenting client config
+sudo apt-get install -y deluge-torrent
+
+#photoshop alternative
+sudo apt-get install -y gimp
+
+#disk managment utility
+sudo apt-get install -y gparted
+
+#frontend for rsync
+sudo apt-get install -y grsync
+
+#terminal dropdown
+sudo apt-get install -y guake
+
+#better top
+sudo apt-get install -y htop
+sudo apt-get install -y atop
+
+#shell script syntax checker
+sudo apt install shellcheck
+
+#batch rename
+sudo apt-get install -y krename
+
+#network ping/traceroute pro
+sudo apt-get install -y mtr
+
+#text based web browser
+sudo apt-get install -y netcat-openbsd
+
+#vpn
+sudo apt-get install -y pia-manager
+
+#text based file browser
+sudo apt-get install -y ranger
+
+#terminal customization
+sudo apt-get install -y screenfetch
+
+#terminal emulator
+sudo apt-get install -y terminator
+
+#terminal enhancment
+sudo apt-get install -y tmux
+
+#text editor
+sudo apt-get install -y vim
+
+#virtual machine
+sudo apt-get install -y virtualbox-qt
+sudo apt-get install -y virtualbox-guest-additions-iso
+
+#media player
+sudo apt-get install -y vlc
+
+#text based web browser
+sudo apt-get install -y w3m
+sudo apt-get install -y w3m-img

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo Enter Gmail Username
+read Username
+echo Enter Password
+read Password
+echo "Who do you want to send this message to?"
+read Recipient
+echo Enter Subject
+read Subject
+echo Enter Message
+read Body
+
+sendEmail -f $Username@gmail.com -t $Recipient -u "$Subject" -m "$Body" -s smtp.googlemail.com:587 -xu $Username -xp $Password -o tls=yes

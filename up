@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#update
+sudo apt-get autoremove
+sudo apt-get autoclean
+sudo apt-get update
+if [ $1 == u ];
+then sudo apt-get dist-upgrade
+else sudo apt-get upgrade
+fi
+sudo curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | 
+sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -

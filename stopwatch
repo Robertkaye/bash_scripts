@@ -1,0 +1,15 @@
+#!/bin/bash
+#counts in any interval you want
+
+if [ -z "$1"  ]; then
+INTERVAL=1
+else
+INTERVAL=$1
+fi
+TIME_ELAPSED=0
+while [ $TIME_ELAPSED -ge 0 ]
+do
+echo $TIME_ELAPSED
+TIME_ELAPSED=$(( $TIME_ELAPSED +1 ))
+sleep $INTERVAL
+done

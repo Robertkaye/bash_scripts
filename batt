@@ -1,0 +1,7 @@
+#!/bin/bash
+#display date, time and battery status
+date
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep state
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "time to full"
+upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep "time to empty"

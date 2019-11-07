@@ -1,0 +1,3 @@
+#!/bin/bash
+#set to start gui on boot
+sudo systemctl set-default multi-user.target

@@ -1,0 +1,18 @@
+#!/bin/bash
+#If you write alot of bash scripts this one automates the process
+
+## warning (work in progress)
+#if [ "$1"=ls "$1" ]; then
+#echo "file already exists, do you want to overwrite it?"; read
+#fi
+if [ -z "$1" ]; then
+echo "What would you like to name your script"; read file
+echo "#!/bin/bash">"$file"
+echo " ">>"$1"
+sudo chmod 770 "$file"
+nano "$file"
+else
+echo "#!/bin/bash">"$1"
+sudo chmod 770 "$1"
+nano "$1"
+fi

@@ -1,0 +1,6 @@
+#!/bin/bash
+#unencrypt file and remove original
+gpg "$1" && rm "$1"
+#fix some day maybe
+#run/open "$1"
+#echo "$1" | cut -d'.' -f1 | cat >

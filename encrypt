@@ -1,0 +1,3 @@
+#!/bin/bash
+#encrypt file and remove unencrypted copy
+gpg -c "$1" && rm "$1"
