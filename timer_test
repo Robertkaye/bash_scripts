@@ -1,0 +1,23 @@
+#!/bin/bash
+#timer with adjustable interval and custom command runs when time runs out
+
+if [ -z "$2"  ]; then
+INTERVAL=1
+re='^[0-9]+$'
+	if ! [[ $2 =~ $re ]] ; then
+	"$2"
+	else
+	INTERVAL=$2
+	fi
+fi
+TIME_LEFT=$1
+while [ $TIME_LEFT -gt 0 ]
+do
+echo $TIME_LEFT
+TIME_LEFT=$(( $TIME_LEFT -1 ))
+sleep $INTERVAL
+done
+if [ $TIME_LEFT = 0 ]; then
+$3
+#play -qn synth 2 pluck C
+fi
