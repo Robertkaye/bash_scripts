@@ -8,4 +8,5 @@ off will shutdown your computer
 restart will reboot your computer
 stopwatch is just a stopwatch
 timer is a timer with adjustable counting speed, time limit, and an option to run any command when times up
+up will autoremove autoclean update and upgrade the system and download the newest brave browser
 everything else i thought was very self explanatory
